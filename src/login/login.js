@@ -1,11 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import FirebaseUI from './FirebaseUI';
 import firebase from 'firebase';
 import AppConfig from '../config/AppConfig';
 
-import Paper from 'material-ui/Paper';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Paper from 'material-ui/Paper'; 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import '../css/colors.css'
@@ -59,9 +58,7 @@ class Login extends React.Component {
         <Redirect to='/' />
       )
     }
-
-    const APPNAME = AppConfig.NAME;
-    
+  
     const style = {
       margin: '0 auto',
       width: '300px',

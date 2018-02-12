@@ -7,6 +7,11 @@ import Divider from 'material-ui/Divider';
 
 import React from 'react';
 import AppConfig from './config/AppConfig'
+ 
+import { Link } from 'react-router-dom';
+
+import MainContainer from './components/MainContainer';
+
 
 class ProtectedContent extends React.Component {
     constructor(props) {
@@ -27,8 +32,29 @@ class ProtectedContent extends React.Component {
         this.setState({ drawerOpen: drawerOpen });
     }
 
+    handleItemClick = (path) => {
+
+        this.setState({
+            redirectPath: path
+        })
+
+    }
+
     render() {
-        const Container = this.props.protectedContentContainer;
+
+        const { logout } = this.props;
+
+
+        const navLinks = [
+            {
+                name: "Dashboard",
+                link: "/dashboard"
+            },
+            {
+                name: "Form",
+                link: "/form"
+            },
+        ]
 
         return (
 
@@ -45,13 +71,21 @@ class ProtectedContent extends React.Component {
                         docked={false}
                         onRequestChange={(drawerOpen) => this.updateDrawerState(drawerOpen)}
                     >
-                        <MenuItem>Menu Item</MenuItem>
-                        <MenuItem>Menu Item 2</MenuItem>
+                        {navLinks.map((item, index) => {
+                            return (<MenuItem key={index} >
+
+                                <Link to={item.link}>{item.name}</Link>
+
+                            </MenuItem>)
+                        })}
+
                         <Divider />
-                        <MenuItem>Log out</MenuItem>
+                        <MenuItem onClick={logout}>Log out</MenuItem>
                     </Drawer>
 
-                    
+                    <MainContainer {...this.props} />
+                     
+
                 </div>
             </MuiThemeProvider>
 
