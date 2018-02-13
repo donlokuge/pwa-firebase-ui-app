@@ -74,7 +74,7 @@ class Login extends React.Component {
 
     return (
       <MuiThemeProvider>
-        <div className='bg-blue-200' style={topStyles}>
+        <div className='bg-blue-900' style={topStyles}>
           <Paper style={style} zDepth={1} >
             <FirebaseUI onSignIn={this.setUser} authUi={this.props.authUi}  />
           </Paper>
