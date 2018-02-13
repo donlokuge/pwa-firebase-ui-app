@@ -32,6 +32,13 @@ npm install
 npm run start
 ```
 
+## Build the project
+
+```
+npm run build
+```
+
+
 
 
 
