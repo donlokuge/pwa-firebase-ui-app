@@ -1,7 +1,7 @@
 # pwa-firebase-ui-app
 Progressive Web App with Firebase Authentication (Firebase UI)
 
-Idea is to create a starter project for Progressive Web App with Firebase Authentication. Since there are no skeliton application to create a Progressive Web App with Firebase and React with Material components and building something like this take some setup and work this project was created. 
+Idea is to create a starter project for Progressive Web App with Firebase Authentication. Since there are no skeleton application to create a Progressive Web App with Firebase and React with Material components and building something like this take some setup and work this project was created. 
 
 ## Features
 * Integrate with Firebase
